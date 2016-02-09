@@ -11,13 +11,48 @@
     <link rel="stylesheet/less" type="text/css" href="assets/less/main.less" />
     <!-- LESS JavaScript компілятор -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/less.js/2.5.3/less.min.js"></script>
-
+    <link rel="stylesheet" type="text/css" href="main.css"/>
 
 </head>
 <body>
 
-<div class="container">
+<div class="navbar navbar-fixed-top upFrame">
+    <div class="logo">
+        <div class="title-1"><h3>Pizza</h3></div>
+       <div class="title-2"><h3>KMA</h3></div>
+        <img class="upperdisc" src="assets/images/discount.svg">
+    </div>
+<div class="top-row">
+    <span class="number hidden-xs" >(044) 222 5 222</span>
+    <span class="time hidden-sm hidden-xs">24 години\7 днів на тиждень</span>
+    <span class="del hidden-md hidden-sm hidden-xs">Безкоштовна доставка піци</span>
+    <button type="button" class="btn login">Ввійти</button>
+</div>
+    <div class="down-row">Піцца</div>
+</div>
+<div class="log">
+<img  src="assets/images/discount.svg">
+<div class="downLogo">
+    <div class="title-1--down"><h4><div>Цього</div><div>Тижня</div> <div> На все</div></h4></div>
+    <div class="title-2-down"><h4>-20%</h4></div>
+</div>
+</div>
+
+
+<div class="main-container container-fluid mainFrame">
+    <div class="chose">
+        <h2>Усі Піци<span class="num">1</span></h2>
+    </div>
+        <div class="btn-group select ">
+            <button type="button" class="btn btn-link ">Усі</button>
+            <button type="button" class="btn btn-link">М'ясні</button>
+            <button type="button" class="btn btn-link">З анасами</button>
+            <button type="button" class="btn btn-link">З грибами</button>
+            <button type="button" class="btn btn-link">З морепродуктами</button>
+            <button type="button" class="btn btn-link">Вегa</button>
+        </div>
     <div class="row">
+        <div class="col-sm-6 col-md-9 ">
         <div class="col-sm-6 col-md-4">
             <div class="thumbnail pizza-card">
                 <img src="assets/images/pizza_1.jpg">
@@ -65,8 +100,25 @@
                 </div>
             </div>
         </div>
+            </div>
+        <div class="col-sm-4 col-md-3 orderFrame">
+            <div class="order">
+                <span>Замовлення<span class="num1">0</span></span>
+                <button type="button" class="btn btn-link cl">Очистити взамовлення</button>
+            </div>
+            <div class="pizza-order"></div>
+            <div class="summ">
+                <div class="pay">Cума замовлення<span class="money"><span class="c">654</span>грн</span></div>
+                <a href="#" class="btn btn-primary ord">Замовити</a>
+            </div>
+
+        </div>
     </div>
 </div>
+<footer class="downFrame">
+    <p>Pizza.22 - практичний проект в межах курсу JavaScript в Києво-Могилянській Академії</p>
+    <p>Доставка піци не здійснюється</p>
+</footer>
 
 <!-- jQuery JavaScript -->
 <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"> </script>
