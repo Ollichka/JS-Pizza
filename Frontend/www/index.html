@@ -11,7 +11,6 @@
     <link rel="stylesheet/less" type="text/css" href="assets/less/main.less" />
     <!-- LESS JavaScript компілятор -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/less.js/2.5.3/less.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="main.css"/>
 
 </head>
 <body>
@@ -40,10 +39,10 @@
 
 
 <div class="main-container container-fluid mainFrame">
-    <div class="chose">
+    <div class="row chose">
         <h2>Усі Піци<span class="num">1</span></h2>
     </div>
-        <div class="btn-group select ">
+        <div class="row btn-group select ">
             <button type="button" class="btn btn-link ">Усі</button>
             <button type="button" class="btn btn-link">М'ясні</button>
             <button type="button" class="btn btn-link">З анасами</button>
@@ -51,62 +50,83 @@
             <button type="button" class="btn btn-link">З морепродуктами</button>
             <button type="button" class="btn btn-link">Вегa</button>
         </div>
-    <div class="row">
-        <div class="col-sm-6 col-md-9 ">
-        <div class="col-sm-6 col-md-4">
-            <div class="thumbnail pizza-card">
-                <img src="assets/images/pizza_1.jpg">
+    <div class="row ">
+        <div class="col-sm-6 col-md-9 mainFramePizza">
+        <!--<div class="col-sm-6 col-md-4">-->
 
-                <div class="caption"><h3>Thumbnail label</h3>
 
-                    <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+            <!--<div class="thumbnail pizza-card">-->
+                <!--<img src="assets/images/pizza_1.jpg">-->
 
-                    <p>
-                        <a href="#" class="btn btn-primary">Button 2</a>
-                        <a href="#" class="btn btn-default">Button 1</a>
-                    </p>
-                </div>
+                <!--<div class="caption"><h3>Thumbnail label</h3>-->
+
+                    <!--<p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>-->
+
+                    <!--<p>-->
+                        <!--<table class="table">-->
+                        <!--<tbody class="about_pizza">-->
+                        <!--<tr class="sizes"><td> <img src="assets/images/size-icon.svg">30<br><img src="assets/images/weight.svg">370</td>-->
+                        <!--<td> <img src="assets/images/size-icon.svg">40<br><img src="assets/images/weight.svg">660</td></tr>-->
+                        <!--<tr><td><strong>99 грн.</strong></td><td><strong>169 грн.</strong></td></tr>-->
+                        <!--<tr><td>  <button class="btn btn-warning small" type="button">Купити</button></td><td>-->
+                        <!--<button class="btn btn-warning big" type="button">Купити</button></td></tr>-->
+                        <!--</tbody>-->
+                        <!--</table>-->
+                    <!--</p>-->
+                <!--</div>-->
+            <!--</div>-->
+        <!--</div>-->
+
+        <!--<div class="col-sm-6 col-md-4">-->
+            <!--<div class="thumbnail pizza-card">-->
+                <!--<img src="assets/images/pizza_2.jpg">-->
+
+                <!--<div class="caption"><h3>Thumbnail label</h3>-->
+
+                    <!--<p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>-->
+
+                    <!--<p>-->
+                        <!--<a href="#" class="btn btn-primary">Button 3</a>-->
+                        <!--<a href="#" class="btn btn-default">Button 4</a>-->
+                    <!--</p>-->
+                <!--</div>-->
+            <!--</div>-->
+        <!--</div>-->
+
+        <!--<div class="col-sm-6 col-md-4">-->
+            <!--<div class="thumbnail pizza-card">-->
+                <!--<img src="assets/images/pizza_3.jpg">-->
+
+                <!--<div class="caption"><h3>Thumbnail label</h3>-->
+
+                    <!--<p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>-->
+
+                    <!--<p>-->
+                        <!--<a href="#" class="btn btn-primary">Button 5</a>-->
+                        <!--<a href="#" class="btn btn-default">Button 6</a>-->
+                    <!--</p>-->
+                <!--</div>-->
+            <!--</div>-->
+        <!--</div>-->
             </div>
-        </div>
-
-        <div class="col-sm-6 col-md-4">
-            <div class="thumbnail pizza-card">
-                <img src="assets/images/pizza_2.jpg">
-
-                <div class="caption"><h3>Thumbnail label</h3>
-
-                    <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-
-                    <p>
-                        <a href="#" class="btn btn-primary">Button 3</a>
-                        <a href="#" class="btn btn-default">Button 4</a>
-                    </p>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-sm-6 col-md-4">
-            <div class="thumbnail pizza-card">
-                <img src="assets/images/pizza_3.jpg">
-
-                <div class="caption"><h3>Thumbnail label</h3>
-
-                    <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-
-                    <p>
-                        <a href="#" class="btn btn-primary">Button 5</a>
-                        <a href="#" class="btn btn-default">Button 6</a>
-                    </p>
-                </div>
-            </div>
-        </div>
-            </div>
-        <div class="col-sm-4 col-md-3 orderFrame">
+        <div class=" col-md-3 orderFrame">
             <div class="order">
                 <span>Замовлення<span class="num1">0</span></span>
                 <button type="button" class="btn btn-link cl">Очистити взамовлення</button>
             </div>
-            <div class="pizza-order"></div>
+            <div class="pizza-order">
+                <span class="prod" >Gvjh</span>
+                <div class="a1">
+                <span class="count">1</span>
+                <button type="button" class="buttonplus">+</button>
+                </div>
+                <button type="button" class="notBought">Не купленно</button>
+                <button type="button" class="bought">Куплено</button>
+                <button type="button" class="delete">X</button>
+                <div class="lines"></div>
+                </span>
+
+            </div>
             <div class="summ">
                 <div class="pay">Cума замовлення<span class="money"><span class="c">654</span>грн</span></div>
                 <a href="#" class="btn btn-primary ord">Замовити</a>
