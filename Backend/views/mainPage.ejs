@@ -1,7 +1,23 @@
 <% include common/header.ejs %>
 
-<div class="">
-    Main Page Content
+<div class="main-container container-fluid mainFrame">
+    <div class="row chose">
+        <h2><span class="filterName">Усі Піци </span> <span class="num">8</span></h2>
+    </div>
+    <div class="row btn-group select ">
+        <button type="button" id="all" class="btn btn-link ">Усі</button>
+        <button type="button" id='meat' class="btn btn-link">М'ясні</button>
+        <button type="button" id='pineapple' class="btn btn-link">З ананасом</button>
+        <button type="button" id="mushroom" class="btn btn-link">З грибами</button>
+        <button type="button" id="ocean" class="btn btn-link">З морепродуктами</button>
+        <button type="button" id="vega" class="btn btn-link">Вегa</button>
+    </div>
+    <div class="row ">
+        <div class="col-sm-6 col-md-9 mainFramePizza">
+
+        </div>
+        <% include common/order.ejs %>
+    </div>
 </div>
 
 <% include common/footer.ejs %>

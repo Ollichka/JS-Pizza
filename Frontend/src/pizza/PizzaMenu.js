@@ -23,6 +23,7 @@ function showPizzaList(list) {
         });
         $node.find(".small").click(function(){
             PizzaCart.addToCart(pizza, PizzaCart.PizzaSize.Small);
+            console.log("button");
         });
 
         $pizza_list.append($node);
@@ -31,17 +32,91 @@ function showPizzaList(list) {
     list.forEach(showOnePizza);
 }
 
+$('#meat').click(function(){
+    filterPizza("meat");
+});
+
+$('#all').click(function(){
+    filterPizza("all");
+});
+
+$('#pineapple').click(function(){
+    filterPizza("pineapple");
+});
+
+$('#mushroom').click(function(){
+    filterPizza("mushroom");
+});
+
+$('#ocean').click(function(){
+    filterPizza("ocean");
+});
+
+$('#vega').click(function(){
+    filterPizza("vega");
+});
+
+
 function filterPizza(filter) {
     //Масив куди потраплять піци які треба показати
     var pizza_shown = [];
+    var num=0;
+    var name = "";
 
-    Pizza_List.forEach(function(pizza){
-        //Якщо піка відповідає фільтру
-        //pizza_shown.push(pizza);
+    if(filter=='all'){ Pizza_List.forEach(function (pizza) {
+        pizza_shown.push(pizza);
+        num++;
+        name = "Усі";
+       });
+    }
 
-        //TODO: зробити фільтри
+    if (filter == 'meat') {
 
-    });
+        Pizza_List.forEach(function (pizza) {
+            if (pizza.content.meat) {
+                pizza_shown.push(pizza);
+                num++;
+                name = "М'ясні";
+            }
+        });
+    }
+    if(filter == 'pineapple') {
+        Pizza_List.forEach(function (pizza) {
+            if (pizza.content.pineapple) {
+                pizza_shown.push(pizza);
+                num++;
+                name = "З ананасом";
+            }
+        });
+    }
+    if(filter == 'mushroom') {
+        Pizza_List.forEach(function (pizza) {
+            if (pizza.content.mushroom) {
+                pizza_shown.push(pizza);
+                num++;
+                name = "З грибами";
+            }
+        });
+    }
+    if(filter == 'ocean') {
+        Pizza_List.forEach(function (pizza) {
+            if (pizza.content.ocean) {
+                pizza_shown.push(pizza);
+                num++;
+                name = "З морепродуктами";
+            }
+        });
+    }
+    if(filter == 'vega')
+        Pizza_List.forEach(function (pizza) {
+            if(pizza.type==='Вега піца') {
+                pizza_shown.push(pizza);
+                num++;
+                name = "Вега";
+            }
+        });
+    $('.num').text(num);
+    $('.filterName').text(name);
 
     //Показати відфільтровані піци
     showPizzaList(pizza_shown);
@@ -50,7 +125,6 @@ function filterPizza(filter) {
 function initialiseMenu() {
     //Показуємо усі піци
     showPizzaList(Pizza_List);
-    console.log("teeerrr");
 
 }
 
