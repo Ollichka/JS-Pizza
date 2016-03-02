@@ -16,4 +16,12 @@ $(function(){
     PizzaMenu.initialiseMenu();
     })
 
+    $(".ord").click(function(){
+        window.location = "/order.html";
+    })
+
+    $(".edit").click(function(){
+        window.location = "/";
+    })
+
 });

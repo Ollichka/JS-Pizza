@@ -23,7 +23,6 @@ function showPizzaList(list) {
         });
         $node.find(".small").click(function(){
             PizzaCart.addToCart(pizza, PizzaCart.PizzaSize.Small);
-            console.log("button");
         });
 
         $pizza_list.append($node);

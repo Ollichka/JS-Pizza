@@ -1,11 +1,13 @@
-<div>
+<div class="oneCart">
+    <div class="lines"></div>
     <%= pizza.title %> (<%= size %>)
     <div><img src="assets/images/size-icon.svg"><%= pizza[size].size %><img src="assets/images/weight.svg"><%= pizza[size].weight %></div>
     <div>
-        Ціна: <%= pizza[size].price %> грн.
+        Ціна:<a class=".price"> <%= pizza[size].price %> </a>грн.
         <button class="btn  minus">-</button>
         <span class="label "><%= quantity %></span>
         <button class="btn  plus">+</button>
         <button class="btn  delete">X</button>
     </div>
+    <div class="lines"></div>
 </div>
