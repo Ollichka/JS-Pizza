@@ -364,7 +364,7 @@ $('#inputAdress').keyup(function(){
     },5000);
 });
 
-$('.next-step-button').click(function(){
+$('.next').click(function(){
     if(nameValidate&&phoneValidate&&addressValidate&&PizzaCart.getPizzaInCart().length!=0){
         API.createOrder({
             name: $('#inputName').val(),

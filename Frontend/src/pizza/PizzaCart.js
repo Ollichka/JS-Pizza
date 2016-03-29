@@ -100,16 +100,13 @@ function initialiseCart() {
     });
 
     $node.find(".cl").click(function(){
-        console.log("cl");
-        Cart.forEach( function (value,key) {
-            console.log("jnk");
-            console.log(key);
-            if (Cart[key] !== undefined) {
-                console.log("remove");
-                removeFromCart(value);
-            }
-        });
+        Cart=[];
+        Storage.set("cart",Cart);
+        sum=0;
+        ammount=0;
+        updateCart();
     });
+
     updateCart();
 }
 
@@ -132,41 +129,43 @@ function updateCart() {
 
         var $node = $(html_code);
 
-        $node.find(".plus").click(function(){
-            //Збільшуємо кількість замовлених піц
-            cart_item.quantity += 1;
-            sum += cart_item.pizza[cart_item.size].price ;
-            ++ammount;
-            //Оновлюємо відображення
-            updateCart();
-        });
-        $node.find(".minus").click(function(){
-            if(cart_item.quantity===1){
-                removeFromCart(cart_item);
-            }else{
-                cart_item.quantity -= 1;
-                --ammount;
-                sum -= cart_item.pizza[cart_item.size].price;
-            }
-            //Оновлюємо відображення
-            updateCart();
-        });
+                $node.find(".plus").click(function(){
+                    //Збільшуємо кількість замовлених піц
+                    cart_item.quantity += 1;
+                    sum += cart_item.pizza[cart_item.size].price ;
+                    ++ammount;
+                    //Оновлюємо відображення
+                    updateCart();
+                });
+                $node.find(".minus").click(function(){
+                    if(cart_item.quantity===1){
+                        removeFromCart(cart_item);
+                    }else{
+                        cart_item.quantity -= 1;
+                        --ammount;
+                        sum -= cart_item.pizza[cart_item.size].price;
+                    }
+                    //Оновлюємо відображення
+                    updateCart();
+                });
 
-        $node.find(".delete").click(function(){
-            console.log("delete 1");
-            removeFromCart(cart_item,cart_item.id);
-            //Оновлюємо відображення
-            updateCart();
-        });
+                $node.find(".delete").click(function(){
+                    console.log("delete 1");
+                    removeFromCart(cart_item,cart_item.id);
+                    //Оновлюємо відображення
+                    updateCart();
+                });
+
+
 
         $cart.append($node);
     }
     var $n = $(".orderFrame");
     console.log(ammount);
     if(ammount===0){
-        $n.find(".ord").prop("disabled", false);
+        $n.find(".ord").hide();
     }else{
-            $n.find(".ord").prop("disabled", true);
+            $n.find(".ord").show();
 
     }
 
@@ -174,6 +173,7 @@ function updateCart() {
     $(".c").text(sum);
     $(".num1").text(ammount);
     Storage.set('cart',Cart);
+
 }
 
 exports.removeFromCart = removeFromCart;
